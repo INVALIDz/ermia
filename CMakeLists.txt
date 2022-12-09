@@ -7,7 +7,7 @@ project(ermia)
 cmake_minimum_required(VERSION 3.8)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Woverloaded-virtual -Werror=reorder -Wno-address-of-packed-member")
-set(LINK_FLAGS "/verbs.h -lnuma -lpthread -pthread -lrt -lglog -lgflags")
+set(LINK_FLAGS " ${CMAKE_SOURCE_DIR}/verbs.h -lnuma -lpthread -pthread -lrt -lglog -lgflags")
 
 link_libraries(${LINK_FLAGS})
 
