@@ -28,7 +28,7 @@
 
 #include "../util.h"
 #include "sm-common.h"
-#include "../verbs.h"
+#include "../libibverbs/verbs.h"
 
 // Use the experimental verbs and libmlx5 on Connect-IB to do atomic ops
 // #define EXP_VERBS 1
