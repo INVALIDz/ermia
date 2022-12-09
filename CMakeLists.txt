@@ -7,7 +7,7 @@ project(ermia)
 cmake_minimum_required(VERSION 3.8)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Woverloaded-virtual -Werror=reorder -Wno-address-of-packed-member")
-set(LINK_FLAGS "-libverbs -lnuma -lpthread -pthread -lrt -lglog -lgflags")
+set(LINK_FLAGS "-lnuma -lpthread -pthread -lrt -lglog -lgflags")
 link_libraries(${LINK_FLAGS})
 
 # Use masstree for index
@@ -16,6 +16,7 @@ add_definitions(-DMASSTREE)
 set(MASSTREE_CONFIG "--enable-max-key-len=1024 --with-malloc=malloc")
 
 option(EXPORT_TPCE_INT64_KEYS "Dump TPC-E keys during load phase" OFF)
+
 if(${EXPORT_TPCE_INT64_KEYS})
   add_definitions(-DEXPORT_TPCE_INT64_KEYS)
 endif()
