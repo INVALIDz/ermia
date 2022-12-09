@@ -23,12 +23,13 @@
 #include <string>
 #include <vector>
 
-#include <infiniband/verbs.h>
+
 #include <netdb.h>
 #include <string.h>
 
 #include "../util.h"
 #include "sm-common.h"
+#include "verbs.h"
 
 // Use the experimental verbs and libmlx5 on Connect-IB to do atomic ops
 // #define EXP_VERBS 1
